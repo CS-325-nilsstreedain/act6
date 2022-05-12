@@ -12,14 +12,13 @@ Output:
 Possible
 Save file as act6.cpp before submitting to Gradescope
 *******************************************************************************/
+
 #include <iostream>
 #include <fstream>
-using namespace std;
 
 int G[100][100];   // if you want to use an adjacency matrix
 
-main ()
-{
+main () {
   // Create a graph given in the above diagram
 
 	int n;      	// number of wrestlers numbered 1..n 
@@ -31,10 +30,9 @@ main ()
 		for (int j = 0; j < n; j++)
 			G[i][j]=0;  
 
-	cin >> m;
+	std::cin >> m;
   
-	for (int j = 0; j < m; j++)
-    {
+	for (int j = 0; j < m; j++) {
 		// 1st wrestler
 		cin >> w1;
 		// 2nd wrestler
@@ -49,9 +47,9 @@ main ()
 	bool result = babyfaceHeel(G,n);
  
 	if (result) {
-	  cout << "Possible"<<endl;
+	  std::cout << "Possible"<<endl;
 	}  else {
-      cout << "Impossible" << endl;
+		std::cout << "Impossible" << endl;
 	}
 	return 0;
 }
